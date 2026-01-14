@@ -1,0 +1,118 @@
+:: StoryTitle
+Lab1 twine story
+
+
+:: StoryData
+{
+  "ifid": "9AD7CF6E-D27C-4DF4-8B46-69C1EB7EE621",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start the case",
+  "zoom": 1
+}
+
+
+:: Alleyway {"position":"900,350","size":"100,100"}
+A dark alleyway is the perfect place to search for crime, being secluded and hidden away from most eyes.
+
+Arriving at the alley, initially nothing seems out of the ordinary, at least for a dark alley like this. Bottles, old newspapers, rotting corpses, garbage bags, just usual dirty alley stuff. Looking behind a garbage container however, you find a tunnel that leads to a large connection of tunnels. Exploring it you find a room with several floor boards used as its walls, more floor boards used for furnishing. Using gloves to handle them, you take a few floor boards to check for fingerprints.
+
+Testing the boards for prints, you find they all contain fingerprints matching to Flurob Burt.
+
+[[Find culprit]] 
+
+
+:: Community Service {"position":"1700,200","size":"100,100"}
+In the end, it was only floor boards and he had no intention of harming anyone. So with your reccomendation, the sentence of Flurob Burt was 5 years of community service.
+
+[[Ending]] 
+
+
+:: Death sentence {"position":"1700,500","size":"100,100"}
+Flurob Burt has stolen an uncountable amount of value in floorboards, and was negligent to the several lives he endangered. For this, he faces the death sentence so he may never endanger anyone ever again.
+
+[[Ending]] 
+
+
+:: Ending {"position":"1900,350","size":"100,100"}
+In the end, Flurob Burt was punished for his crimes and all the floor boards were reurned and put back in to the floors they were stolen from. Having helped solve the case you have been paid a decent sum of money.
+
+The end
+
+
+:: Find and confront them directly {"position":"1300,500","size":"100,100"}
+After going over the government profile of Flurob Burt, you find his address and go to his house.
+
+Knocking on his door, you find that he suprisingly answers the door but refuses to answer any questions. Thankfully, you have a search warrant so you can legally search his home without needing to ask many questions. Searching the house, you find plans that describe a hidden tunnel system and a map that shows which houses have been stolen from.
+
+Seeing this as enough evidence, it is now time to [[Put the culprit to trial]] 
+
+
+
+
+:: Find culprit {"position":"1100,350","size":"100,100"}
+With the culprit identified, now comes the question of how to catch the culprit.
+
+What method would be best for this situation?
+
+[[Trap the floors of the houses]] [[Keep a cop in every house]] [[Find and confront them directly]] 
+
+
+:: Imprisonment {"position":"1700,350","size":"100,100"}
+No harm maay have been intended, but many lives could have been endagered as well as the theft of private property. Due to this, it was unanimously decided that Flurob Burt should face 7 years of imprisonment for his crimes.
+
+[[Ending]] 
+
+
+:: Keep a cop in every house {"position":"1300,350","size":"100,100"}
+With no way to know which house will have the floor stolen from under the owners nose, the only way to catch Flurob Burt in the act is to have someone at every house with a floor left to steal.
+
+That night, as expected Flurob was spotted stealing more floors. Several officers went to the house that was reported and flooded the area under the floor and after several hours of searching, caught Flurob.
+
+Now that he has been caught, it is time to [[Put the culprit to trial]] 
+
+
+:: Neighborhood {"position":"900,200","size":"100,100"}
+You decide to check the scene of the crime, some of the houses with their floor board stolen.
+
+Going around the neighborhood, you ask the residents if you can investigate the holes in the floors to which most comply. Looking through most holes, the culprit seems clever. Hardly anything that could be seen as solid evidence was left behind.
+
+That being said, there was a single piece of evidence that could be found: a single strand of hair, hidden by the dirt, almost unnoticed by you and clearly unnoticed by the thief. After DNA testing the hair, you find it to match Flurob Burt.
+
+[[Find culprit]] 
+
+
+:: Police station {"position":"900,500","size":"100,100"}
+Seeing as they may know more about the case than you do, you decide to stop by the police station.
+
+When asking for information on the case, the police tell you that 2 officers reportedly saw the culprit and was chasing them down as you spoke. Once you knew the location you got there as soon as you could. Once you found the cops chasing the culprit, they admit to losing the culprit in the sewers, but managed to get a good look at their face.
+
+After a sketch artist gets the details, the sketch looks like someone who could only be Flurob Burt.
+
+[[Find culprit]] 
+
+
+:: Put the culprit to trial {"position":"1500,350","size":"100,100"}
+Now that you have caught Flurob Burt, he can be put on trial for his crimes. 
+
+With the evidence you have found, the judge and jury both see no room for doubt, Flurob Burt is guilty of all charges. The only question that remains is what should be his punishment?
+
+[[Community Service]] [[Imprisonment]] [[Death sentence]] 
+
+
+:: Start the case {"position":"700,350","size":"100,100"}
+$100000000000000000000000000000000000 worth of floorboards have been stolen. Reprtedly, throughout the week people have reported that at various points in the day many houses have had parts of their floors pulled down and stolen. A few people who were in the room at the same time the floors were stolen from that room had checked under the floor and saw a figure running away with the floorboards, but with no dicernable features.
+
+You, a detective, have been hired to find the stolen floors and the culprit who have been stealing them from under everyones noses.
+
+Where do you search first?
+
+[[Neighborhood]]  [[Alleyway]] [[Police station]] 
+
+
+:: Trap the floors of the houses {"position":"1300,200","size":"100,100"}
+If Flurob Burt wants the floors so badly, then why not prepare some floors just for him and let him take them?
+
+During the day, officers asked several civilians to put a device that would alert the police to the floor boards location. That night, the police station detected a floor board moving and sent officers to that location. Arriving at the location the officers quickly found and subdued Flurob before he could get away.
+
+Now that he has been caught, it is time to [[Put the culprit to trial]] 

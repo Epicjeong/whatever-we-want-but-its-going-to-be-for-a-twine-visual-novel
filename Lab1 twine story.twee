@@ -15,7 +15,7 @@ Lab1 twine story
 :: Alleyway {"position":"900,350","size":"100,100"}
 A dark alleyway is the perfect place to search for crime, being secluded and hidden away from most eyes.
 
-Arriving at the alley, initially nothing seems out of the ordinary, at least for a dark alley like this. Bottles, old newspapers, rotting corpses, garbage bags, just usual dirty alley stuff. Looking behind a garbage container however, you find a tunnel that leads to a large connection of tunnels. Exploring it you find a room with several floor boards used as its walls, more floor boards used for furnishing. Using gloves to handle them, you take a few floor boards to check for fingerprints.
+Arriving at the alley, initially nothing seems out of the ordinary, at least for a dark alley like this. Bottles, old newspapers, rotting corpses, garbage bags, just usual dirty alley stuff. However, looking behind a garbage container, you find a tunnel that leads to a large connection of tunnels. Exploring it you find a room with several floor boards used as its walls, with more floor boards used for furnishing. Using gloves to handle them, you take a few floor boards to check for fingerprints.
 
 Testing the boards for prints, you find they all contain fingerprints matching to Flurob Burt.
 
@@ -55,7 +55,11 @@ With the culprit identified, now comes the question of how to catch the culprit.
 
 What method would be best for this situation?
 
-[[Trap the floors of the houses]] [[Keep a cop in every house]] [[Find and confront them directly]] 
+[[Trap the floors of the houses]]
+
+[[Keep a cop in every house]]
+
+[[Find and confront them directly]] 
 
 
 :: Imprisonment {"position":"1700,350","size":"100,100"}
@@ -101,13 +105,17 @@ With the evidence you have found, the judge and jury both see no room for doubt,
 
 
 :: Start the case {"position":"700,350","size":"100,100"}
-$100000000000000000000000000000000000 worth of floorboards have been stolen. Reprtedly, throughout the week people have reported that at various points in the day many houses have had parts of their floors pulled down and stolen. A few people who were in the room at the same time the floors were stolen from that room had checked under the floor and saw a figure running away with the floorboards, but with no dicernable features.
+$100000000000000000000000000000000000 worth of floorboards have been stolen. Reportedly, throughout the week people have reported that at various points in the day many houses have had parts of their floors pulled down and stolen. A few people who were in the room when the floors were stolen had checked under the floor and saw a figure running away with the floorboards, but with no dicernable features.
 
 You, a detective, have been hired to find the stolen floors and the culprit who have been stealing them from under everyones noses.
 
 Where do you search first?
 
-[[Neighborhood]]  [[Alleyway]] [[Police station]] 
+[[Neighborhood]] 
+
+[[Alleyway]] 
+
+[[Police station]] 
 
 
 :: Trap the floors of the houses {"position":"1300,200","size":"100,100"}

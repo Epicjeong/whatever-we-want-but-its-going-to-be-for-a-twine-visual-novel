@@ -13,36 +13,77 @@ Lab1 twine story
 
 
 :: Alleyway {"position":"800,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 (set: $evidence to "tunnelSystem")
 A dark alleyway is the perfect place to search for crime, being secluded and hidden away from most eyes.
 
-Arriving at the alley, initially nothing seems out of the ordinary, at least for a dark alley like this. Bottles, old newspapers, rotting corpses, garbage bags, just usual dirty alley stuff. However, looking behind a garbage container, you find a tunnel that leads to a large connection of tunnels. Exploring it you find a room with several floor boards used as its walls, with more floor boards used for furnishing. Using gloves to handle them, you take a few floor boards to check for fingerprints.
+Arriving at an alley in the neighborhood, initially nothing seems out of the ordinary, at least for a dark alley like this. Bottles, old newspapers, rotting corpses, garbage bags, just usual dirty alley stuff. However, looking behind a garbage container, you find a tunnel that leads to a large connection of tunnels. Exploring it you find a room with several floor boards used as its walls, with more floor boards used for furnishing. Using gloves to handle them, you take a few floorboards to check for fingerprints.
 
 Testing the boards for prints, you find they all contain fingerprints matching to Flurob Burt.
 
 [[Find culprit]]
 
 
-:: Community Service {"position":"1600,200","size":"100,100"}
+:: Chase them down {"position":"1400,500","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
+(set: $captureMethod to "chase")
+Before Flurob can even get far, you sprint after him so he won't get away. Running after him, you eventually tackle Flurob into the ground amd apprehend him before he gets too far. Once you do, you report to the police that you have him apprehended (if: $evidence is "policeSketch")[to their suprise. They did not expect that you would be that dedicated to the case, considering you hardly helped with the investigation. Regardless, they thank you for helping capture Flurob] and shortly after he is arrested.
+
+[[Now that he has been caught, it is time to put the culprit to trial|Put the culprit to trial]]
+
+
+:: Community Service {"position":"2000,200","size":"100,100"}
+<img
+class="fit-picture"
+src="https://tse2.mm.bing.net/th/id/OIP.UyWnzzv2q5T4qkB8LzoxGgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+>
 (set: $sentence to "service")
-In the end, it was only floor boards and he had no intention of harming anyone. So with your reccomendation, the sentence of Flurob Burt was 5 years of community service to replace the stolen floors (if: $evidence is "tunnelSystem")[and filling in the tunnels he dug out].
+(if: $evidence is "policeSketch" or $captureMethod is "policeReport")[While the jury is unsure why you feel you get a say in Flurob's punishment, as you let the police do most of the work, they agree with your decision. ]In the end, it was only floorboards and he had no intention of harming anyone. So with your reccomendation, the sentence of Flurob Burt was 5 years of community service to replace the stolen floors (if: $evidence is "tunnelSystem")[and filling in the tunnels he dug out].
 
 [[Ending]]
 
 
-:: Death sentence {"position":"1600,500","size":"100,100"}
- (if: $captureMethod is "confrontation")[While you had a search warrant, the jury did not feel it was right to investigate his house and instead should have brought in Flurob for interrogation. The jury instead agrees to sentence Flurob to 4 years in prison. (set: $sentence to "prison")](if: $captureMethod is "tunnelChase" or "trackFloors")[Flurob Burt has stolen an uncountable amount of value in floorboards, and was negligent to the several lives he endangered. For this, he faces the death sentence so he may never endanger anyone ever again. (set: $sentence to "death")]
+:: Death sentence {"position":"2000,500","size":"100,100"}
+<img
+class="fit-picture"
+src="https://tse2.mm.bing.net/th/id/OIP.UyWnzzv2q5T4qkB8LzoxGgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+>
+Flurob Burt has stolen an uncountable amount of value in floorboards, and was negligent to the several lives he endangered. For this, he faces the death sentence so he may never endanger anyone ever again. (set: $sentence to "death")
 
 [[Ending]]
 
 
-:: Ending {"position":"1800,350","size":"100,100"}
-In the end, Flurob Burt (if: $sentence is "service")[is working to atone for his crimes by refilling the tunnels and replacing the floorboards. While Flurob seems content, some may question if this punishment was fitting for the crime comitted. Eventually the tunnels were filled] (if: $sentence is "prison") [is serving his sentence in prison, where he would remain for the next few years. Hopefully this would teach Flurob to never try something like this again, but for now, he must be punished for his crimes](if: $sentence is "death")[was for better or for worse, sentenced to death. Whether or not this was desereved is debatable but it is certain that Flurob will never endanger anyone again,] and all the floor boards were returned and put back in to the floors they were stolen from. Having helped solve the case you have been paid a decent sum of money.
+:: Ending {"position":"2175,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://thumbs.dreamstime.com/b/elements-investigation-i-8788315.jpg"
+>
+In the end, Flurob Burt (if: $sentence is "service")[is now working to atone for his crimes by refilling the tunnels and replacing the floorboards. While Flurob seems content, some may question if this punishment was fitting for the crime comitted. Eventually the tunnels were filled] (if: $sentence is "prison") [is serving his sentence in prison, where he would remain for the next few years. Hopefully this would teach Flurob to never try something like this again, but for now, he must be punished for his crimes](if: $sentence is "death")[was for better or for worse, sentenced to death. Whether or not this was desereved is debatable but it is certain that Flurob will never endanger anyone again,] and all the floor boards were returned and put back in to the floors they were stolen from. Having helped solve the case you have been paid (if: $captureMethod is "tunnelChase" or "chase")[a very nice sum of money for helping apprehend the culprit](else-if: $evidence is "policeSketch" or $captureMethod is "policeReport")[a fair sum of money, though they did admit that you weren't paid as much due to the police doing a lot of the work](else:)[a decent sum of money].
+
+The end
+
+
+:: Failure {"position":"1600,700","size":"100,100"}
+<img
+class="fit-picture"
+src="https://thumbs.dreamstime.com/b/elements-investigation-i-8788315.jpg"
+>
+Flurob may have gotten away, but it's not like it matters too much. Floorboards can be replaced, and you still get paid for helping investigate, which is all that matters.
 
 The end
 
 
 :: Find culprit {"position":"1000,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 With the culprit identified, now comes the question of how to catch the culprit.
 
 What method would be best for this situation?
@@ -51,26 +92,39 @@ What method would be best for this situation?
 
 [[Find their house and confront them directly]]
 
-(if: $evidence is "tunnelSystem")[[Send police into the tunnels]]
+(if: $evidence is "tunnelSystem")[[[Show the police the tunnels]]]
 
 
 :: Find their house and confront them directly {"position":"1200,500","size":"100,100"}
-(set: $captureMethod to "confrontation")
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 After going over the government profile of Flurob Burt, you find his address and go to his house. Knocking on his door, you find that Flurob suprisingly answers the door but refuses to answer any questions. Thankfully, you have a search warrant so you can legally search his home without needing to ask many questions.
 
-(if: $evidence is "tunnelSystem") [Searching the house, you find plans that describe a hidden tunnel system and a map that shows which houses have been stolen from.](if: $evidence is "hairDNA")[In the house, you find another strand of hair which you take while investigating the house. Taking it back to the lab for testing, you find it matches with the other hair you found](if: $evidence is "policeSketch")[Almost immediately, you find that Flurob's face matches almost perfectly with the police sketch. When you tell him that the suspect you're looking for looks almost exactly like him, he tries to flee but is caught immediately]
+(if: $evidence is "tunnelSystem") [Searching the house, you find plans that describe a hidden tunnel system and a map that shows which houses have been stolen from. After taking them, you turn to Flurob to see him running out of his house to try and escape.](if: $evidence is "hairDNA")[In the house, you find another strand of hair which you take while investigating the house. Taking it back to the lab for testing, you find it matches with the other hair you found. When you return to arrest Flurob, you find that he's running away from the house.](if: $evidence is "policeSketch")[Almost immediately, you find that Flurob's face matches almost perfectly with the police sketch. When you tell him that the suspect you're looking for looks almost exactly like him, he immidiately runs out the door to try and tries to escape.]
 
-Seeing this as enough evidence, it is now time to [[Put the culprit to trial]]
+[[It's not your job to chase down criminals, just tell the police the culprit's running|Tell the police the culprit's running]]
+
+[[But if you chase them down it's unlikely they would escape |Chase them down]]
 
 
-:: Imprisonment {"position":"1600,350","size":"100,100"}
+:: Imprisonment {"position":"2000,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://tse2.mm.bing.net/th/id/OIP.UyWnzzv2q5T4qkB8LzoxGgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+>
 (set: $sentence to "prison")
-No harm may have been intended, but many lives could have been endagered as well as the theft of private property. Due to this, it was unanimously decided that Flurob Burt should face 7 years of imprisonment for his crimes.
+(if: $evidence is "policeSketch" or $captureMethod is "policeReport")[While the jury is unsure why you feel you get a say in Flurob's punishment, as you let the police do most of the work, they agree with your decision. ]No harm may have been intended, but many lives could have been endagered as well as the theft of private property. Due to this, it was unanimously decided that Flurob Burt should face 7 years of imprisonment for his crimes.
 
 [[Ending]]
 
 
 :: Neighborhood {"position":"800,200","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 (set: $evidence to "hairDNA")
 You decide to check the scene of the crime, some of the houses with their floor board stolen.
 
@@ -82,20 +136,28 @@ That being said, there was a single piece of evidence that could be found: a sin
 
 
 :: Police station {"position":"800,500","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 (set: $evidence to "policeSketch")
-Seeing as they may know more about the case than you do, you decide to stop by the police station.
+To give yourself as little work as needed, you go to the police station to see what they already have discovered
 
 When asking for information on the case, the police tell you that 2 officers reportedly saw the culprit and was chasing them down as you spoke. Once you knew the location you got there as soon as you could. Once you found the cops chasing the culprit, they admit to losing the culprit in the sewers, but managed to get a good look at their face.
 
-After a sketch artist gets the details, the sketch looks like someone who could only be Flurob Burt.
+After a sketch artist gets the details, the sketch they made looks like someone who could only be a person named Flurob Burt.
 
 [[Find culprit]]
 
 
-:: Put the culprit to trial {"position":"1400,350","size":"100,100"}
+:: Put the culprit to trial {"position":"1800,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://tse2.mm.bing.net/th/id/OIP.UyWnzzv2q5T4qkB8LzoxGgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+>
 Now that you have caught Flurob Burt, he can be put on trial for his crimes. 
 
-(if: $captureMethod is "trackFloors")[Having caught Flurob in the act, the judge and jury both agree that Flurob is guilty beyond reasonable doubt and will serve what ever sentence is given.] (if: $captureMethod is "tunnelChase")[With the discovery of the tunnels the jury and judge decide that Flurob is undeniably guilty, potentially endangering countless civilians if the tunnels were to collapse.] (if: $captureMethod is "confrontation")[Although the jury is on the fence on whether the visit to Flurobs house was justified, his reaction is still enough to confirm that he is guilty.]
+(if: $captureMethod is "trackFloors")[Having caught Flurob in the act, the judge and jury both agree that Flurob is guilty beyond reasonable doubt and will serve what ever sentence is given.] (if: $captureMethod is "tunnelChase")[With the discovery of the tunnels the jury and judge decide that Flurob is undeniably guilty, potentially endangering countless civilians if the tunnels were to collapse.] (if: $captureMethod is "policeReport" or "chase")[Although the jury is on the fence on whether the visit to Flurobs house was justified, his reaction is still enough to confirm that he is guilty.]
 
 The only question that remains is what should be his punishment?
 
@@ -103,37 +165,69 @@ The only question that remains is what should be his punishment?
 
 [[Imprisonment]]
 
-[[Death sentence]]
+(if: $evidence is not "policeSketch" and $captureMethod is not "policeReport")[[[Death sentence]]]
+
 
 
 :: Put trackers on the floor boards of several houses {"position":"1200,200","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 (set: $captureMethod to "trackFloors")
 If Flurob Burt wants the floors so badly, then why not prepare some floors just for him and let him take them?
 
-During the day, officers asked several civilians to put a device that would alert the police to the floor boards location. That night, the police station detected a floor board moving and sent officers to that location. Arriving at the location the officers quickly found and subdued Flurob before he could get away. (if: $evidence is "policeSketch")[Seeing him as he gets arrested, it is confirmed that the police sketch matches Flurob himself]
+(if: $evidence is "policeSketch")
+[During the day you told officers to plant a device in several houses that would alert the police to the floorboards location. That night, you recieve the report that Flurob has been arrested, and it is confirmed that the police sketch matches Flurob's face.]
+(else:)[During the day you and several officers planted a device in several houses that would alert you and the police to the floor boards location. Later that night you get notified of a floorboard starting to move and head to the location immediately. You arrive as the police does, catching and arresting Flurob as he exits an alleyway.]
 
-Now that he has been caught, it is time to [[Put the culprit to trial]]
+[[Now that he has been caught, it is time to put the culprit to trial|Put the culprit to trial]]
 
 
-:: Send police into the tunnels {"position":"1200,350","size":"100,100"}
+:: Show the police the tunnels {"position":"1200,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 (set: $captureMethod to "tunnelChase")
 Thanks to you finding the tunnels, you have an area to concentrate the police into.
-That night, before Flurob was able to steal more floors, several officers went into the tunnels you found and flooded the area so there was nowhere Flurob could hide.
+That night, before Flurob was able to steal more floors, you and several officers went into the tunnels you found and flooded the area so there was nowhere Flurob could hide.
 
 After a few hours of searching an officer reported that they had seen Flurob and in a matter of minutes, caught Flurob.
 
-Now that he has been caught, it is time to [[Put the culprit to trial]]
+[[Now that he has been caught, it is time to put the culprit to trial|Put the culprit to trial]]
 
 
 :: Story start {"position":"600,350","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
 $100000000000000000000000000000000000 worth of floorboards have been stolen. Reportedly, throughout the week people have reported that at various points in the day many houses have had parts of their floors pulled down and stolen. A few people who were in the room when the floors were stolen had checked under the floor and saw a figure running away with the floorboards, but with no dicernable features.
 
 You, a detective, have been hired to find the stolen floors and the culprit who have been stealing them from under everyones noses.
 
 Where do you search first?
 
-The [[Neighborhood]] would let you survey the houses with stolen floors
+[[The Neighborhood would let you survey the houses with stolen floors|Neighborhood]]
 
-[[Alleyway]]s typically are flush with crimes
+[[Alleyways typically are flush with crimes|Alleyway]]
 
-A visit to the [[Police station]] could get you some evidence the police found
+[[A visit to the Police station could get you evidence the police already found|Police station]]
+
+
+:: Tell the police the culprit's running {"position":"1400,700","size":"100,100"}
+<img
+class="fit-picture"
+src="https://www.shutterstock.com/image-vector/magnifying-glass-icon-white-on-260nw-1059366797.jpg"
+>
+(if: $evidence is "policeSketch")[Seeing Flurob escape you report to the police that he's running away and the direction he ran to. After that you return take a walk around the neighborhood as you wait for the police to report back to you.
+
+[[When they do, they tell you that Flurob got away|Failure]]]
+(else:)[Seeing Flurob escape you report to the police that he's running away and the direction he ran to. As the police track down Flurob, you continue to investigate Flurob's house to see if any other evidence could be found. While you do not find anything, the police report that they have managed to catch and arrest Flurob.
+(set: $captureMethod to "policeReport")
+[[Now that he has been caught, it is time to put the culprit to trial|Put the culprit to trial]]]
+
+
+:: \[Death sentence {"position":"1800,600","size":"100,100"}
+
